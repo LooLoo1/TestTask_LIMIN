@@ -1,0 +1,40 @@
+.filter-conteiner {
+  padding: 2rem 2rem;
+  background-color: white;
+  margin: 1rem;
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  label {
+    gap: 1rem;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-align: center;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  input {
+    position: absolute;
+    visibility: hidden;
+    &:checked + label {
+      color: white;
+      background-color: #4b5548;
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+  .center {
+    text-align: center;
+  }
+}
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}

@@ -1,0 +1,45 @@
+.produckt {
+  width: 25%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+  // & > *:not(:first-child){}
+  img {
+    cursor: pointer;
+  }
+  .conteiner-data {
+    display: flex;
+    justify-content: space-between;
+  }
+  .price,
+  .rating {
+    font-size: 1.2em;
+  }
+  .rating {
+    margin-top: 0.1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+  }
+}
+
+@media (max-width: 1048px) {
+  .produckt {
+    width: 33%;
+  }
+}
+
+@media (max-width: 650px) {
+  .produckt {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .produckt {
+    width: 100%;
+  }
+}

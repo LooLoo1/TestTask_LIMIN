@@ -1,0 +1,19 @@
+.produckt-conteiner{
+	padding: 2rem 3rem;
+	margin: 1rem;
+	background-color: white;
+	p{
+		font-size: 1.2em;
+		cursor: pointer;
+		text-align: center;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+.produckt-list{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}

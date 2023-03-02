@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import "./App.scss";
+import { Navigate, Route, Routes } from "react-router-dom";
+
+import Main from "./pages/Main";
+import Office from "./pages/Office";
+import Login from "./pages/Login";
+
+import Layout from "./components/Layout";
+import Basket from "./pages/Basket";
+import { useSelector } from "react-redux";
+import Produckt from "./pages/Produckt";
 
 function App() {
+	const { user } = useSelector((state) => state.authReducer);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Main />} />
+        <Route path="/basket" element={(!user)?<Navigate to="/"/>:<Basket />} />
+        <Route path="/office" element={(!user)?<Navigate to="/login"/>:<Office />} />
+        <Route path="/:product" element={<Produckt />} />
+        <Route path="*" element={<Main />} />
+      </Route>
+      <Route path="/login" element={<Login />} />
+      <Route path="/create" element={<Login type="create" />} />
+    </Routes>
   );
 }
 
