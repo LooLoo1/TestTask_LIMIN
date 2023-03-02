@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
-import "./basket.scss";
+import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { useDispatch, useSelector } from "react-redux";
+
 import { setAction } from "../../store/basketReducer";
+
+import "./basket.scss";
 
 export const Basket = () => {
   const { list } = useSelector((state) => state.basketReducer);

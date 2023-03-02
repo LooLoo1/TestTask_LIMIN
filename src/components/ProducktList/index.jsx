@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import "./producktList.scss";
+
 import Produckt from "../Produckt";
 import { data } from "../../img/imgs";
+
+import "./producktList.scss";
 
 const ProducktList = () => {
   const [open, setOpen] = useState(false);
@@ -19,7 +21,7 @@ const ProducktList = () => {
         <p
           onClick={() => {
             setOpen(true);
-				setProduckts(data)
+            setProduckts(data);
           }}
         >
           View All Products

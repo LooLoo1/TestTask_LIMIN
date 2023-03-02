@@ -1,12 +1,14 @@
 import React from "react";
-import "./produckt.scss";
-import { imgs } from "../../img/imgs";
-import Button from "../Button";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { useDispatch } from "react-redux";
+
+import { imgs } from "../../img/imgs";
+import Button from "../Button";
 import { removeItemAction } from "../../store/basketReducer";
-import { useNavigate } from "react-router-dom";
+
+import "./produckt.scss";
 
 const ProducktItem = ({ data, index }) => {
   const { img, name, price, rating, id } = data;
@@ -43,13 +45,3 @@ const ProducktItem = ({ data, index }) => {
 };
 
 export default ProducktItem;
-
-// {
-// 	"id": 1,
-// 	"img": 0,
-// 	"name": "Radiant Skin Cream",
-// 	"description": "Get glowing, radiant skin with this luxurious cream. Infused with natural ingredients and antioxidants, it helps to reduce the appearance of fine lines and wrinkles, while providing intense hydration for a plumper, more youthful-looking complexion. With its lightweight, non-greasy formula, it's perfect for all skin types.",
-// 	"rating": 4.1,
-// 	"price": 79.99,
-// 	"firm": "Glow Cosmetics"
-//  },

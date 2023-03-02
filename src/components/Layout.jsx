@@ -1,11 +1,15 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link, Outlet } from "react-router-dom";
+
 import Logo from "./Logo";
 import Basket from "./Basket";
 import Avatar from "./Avatar";
+
 const Layout = () => {
+	
   const { user } = useSelector((state) => state.authReducer);
+
   return (
     <div className="layout">
       <header>

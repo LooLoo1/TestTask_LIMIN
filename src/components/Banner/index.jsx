@@ -1,12 +1,14 @@
 import React from "react";
+
 import Button from "../Button";
-import "./banner.scss";
 import { imgs, data } from "../../img/imgs";
 import { useDispatch } from "react-redux";
 import { addItemAction } from "../../store/basketReducer";
 
+import "./banner.scss";
+
 const Banner = () => {
-	const dispatch = useDispatch()
+  const dispatch = useDispatch();
   return (
     <div className="banner">
       <div className="dark">
@@ -19,7 +21,13 @@ const Banner = () => {
       </div>
       <div className="light">
         <img src={imgs[6]} alt="" />
-        <Button onClick={()=>{dispatch(addItemAction(data[5]))}}>Add to Card</Button>
+        <Button
+          onClick={() => {
+            dispatch(addItemAction(data[5]));
+          }}
+        >
+          Add to Card
+        </Button>
       </div>
     </div>
   );

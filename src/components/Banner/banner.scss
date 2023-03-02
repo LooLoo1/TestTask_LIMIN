@@ -38,8 +38,9 @@
 @media (max-width: 630px) {
   .banner {
     flex-direction: column;
-	 .light, .dark{
-		width: 100%;
-	 }
+    .light,
+    .dark {
+      width: 100%;
+    }
   }
 }

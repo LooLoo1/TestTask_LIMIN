@@ -1,11 +1,13 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+
 import Button from "../../components/Button";
 import { addItemAction } from "../../store/basketReducer";
 import { data, imgs } from "../../img/imgs";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+
 import './produckt.scss'
 
 const Produckt = () => {
@@ -14,7 +16,7 @@ const Produckt = () => {
   const { product } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const info = data.filter((el) => el.id === Number(product))[0];
+  const info = data.find((el) => el.id === Number(product));
   const { img, name, description, rating } = info;
   return (
     <div className="card">

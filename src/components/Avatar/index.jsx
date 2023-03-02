@@ -1,6 +1,7 @@
 import React from "react";
-import "./avatar.scss";
 import { useSelector } from "react-redux";
+
+import "./avatar.scss";
 
 export const Avatar = () => {
   const { user } = useSelector((state) => state.authReducer);
